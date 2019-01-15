@@ -1,0 +1,303 @@
+const INPUT = `ohvflkatysoimjxbunazgwcdpr
+ohoflkctysmiqjxbufezgwcdpr
+ohvflkatysciqwxfunezgwcdpr
+fhvflyatysmiqjxbunazgwcdpr
+ohvhlkatysmiqjxbunhzgwcdxr
+ohvflbatykmiqjxbunezgscdpr
+ohvflkatasaiqjxbbnezgwcdpr
+ohvflkatyymiqjxrunetgwcdpr
+ohvflkatbsmiqhxbunezgwcdpw
+oheflkytysmiqjxbuntzgwcdpr
+ohvflkatrsmiqjibunezgwcupr
+ohvflkaiysmiqjxbunkzgwkdpr
+ohvilkutysmiqjxbuoezgwcdpr
+phvflkatysmkqjxbulezgwcdpr
+ohvflkatnsmiqjxbznezgpcdpr
+ohvylkatysriqjobunezgwcdpr
+ohvflkatytmiqjxbunezrwcypr
+ohvonkatysmiqjxbunezgwxdpr
+ohvflkatgsmoqjxyunezgwcdpr
+ohvflkbtqsmicjxbunezgwcdpr
+ohvflkatysmgqjqbunezgwcdvr
+ohvtlkatyrmiqjxbunezgwcdpi
+ohvflkatyskovjxbunezgwcdpr
+ohvflkayysmipjxbunezgwcdpu
+ohvalkltysmiqjxbunezgecdpr
+ohvflkatysmiqjxiunezgnndpr
+ohvflkatyomiqjxbbnezgwcdpp
+ohvflkatysmiqjxbuoezgncdpy
+omvflkvtysmiqjxwunezgwcdpr
+ohvflkatynmicjxbunezgwpdpr
+ohvflkatyqmaqjxbunezvwcdpr
+ohbfhkatysmiqjxbunezgwcdqr
+ohvflkatesmiqjvbunezpwcdpr
+ohvflkatysmsqjxiunezgwcdhr
+ohvfjkatysmwqjxbunezgwcddr
+ohvflkanysmiqjxbunwkgwcdpr
+ohqflkatysmiqjxbuuezgwcddr
+ohvflkatysmvqjxbznlzgwcdpr
+ohvflkatysmiqjxbunjzwwqdpr
+ohvfjkatysmiqxxbunezgwcupr
+chvfxkatysmiqjxxunezgwcdpr
+uhvflkatitmiqjxbunezgwcdpr
+ohvflbatysmiqjxbuntzgwcdor
+ohvflkmtysmmqjxbunexgwcdpr
+ohvflsatysmyqjxjunezgwcdpr
+ohvfskatysmiqjjbunezgwcdpg
+ohvflkatysniqjxbunexgwcrpr
+ohvfekatysmiqjxbunedswcdpr
+ohvfltatysmjqjxbunezghcdpr
+ohvflkatydmiqjxvunezggcdpr
+oavflkatysmiqjxtunazgwcdpr
+ohvflkltysmiqjxbuzeugwcdpr
+ohbflkatysmiqjybuuezgwcdpr
+ehvfzkatysmiqjxbuhezgwcdpr
+odvflkatssmiqjxbunezgwcdpj
+ohvflkatysmiqjzbufezgwbdpr
+jhvflkdtysmiqqxbunezgwcdpr
+ohvflkatysmiqjwbunengwcnpr
+ohvfskatysmiqjxbxuezgwcdpr
+ohvflkatysmiqjobvnezgwcrpr
+ohvrlkatysmiqjxbwnezgrcdpr
+ofvflkatysmiqjxbunezpwcdwr
+ohvfxdatyomiqjxbunezgwcdpr
+yhvflkatydmiqjxbubezgwcdpr
+ohvflkatysdiqjxbuneztwcspr
+ohvflkatydmiquxbunezgwcbpr
+ohvflkatysmiqcxbukezgwcdwr
+ohvflkntasmiqjxbunezghcdpr
+lhvflkatysmiqjxbunezqwckpr
+ehifikatysmiqjxbunezgwcdpr
+ohvflkatysmiqjcbutezgwcdpm
+ohvflkatjssiqrxbunezgwcdpr
+oyvflkavysmiqjxlunezgwcdpr
+orvflkgtysmiqjxbukezgwcdpr
+ihvflkatysmiqaxbunpzgwcdpr
+ohvflkatusmiqjxbbnezgwchpr
+ohvflkatysbiqjxvuneugwcdpr
+ohvflkatysmiqjcbungzgwcwpr
+ovvflkatysmidjxbunezgscdpr
+ohvflqatysmiljxbunfzgwcdpr
+ghvfokatysmiqjxbunqzgwcdpr
+nxvflkatysmxqjxbunezgwcdpr
+ohvflkatysmiqjxbexezgwrdpr
+ohvfrkatysmhqjxbuntzgwcdpr
+ohvflkvtysmiqjxocnezgwcdpr
+ohvglkgtysmiqjxnunezgwcdpr
+ohvflkatysmnqjxbunecgwqdpr
+oyvflkatysgiqjxbcnezgwcdpr
+ofvflkatysmiqjxbunfzgwcdpg
+otvflkttysmiqjxbunezgwmdpr
+ohvflkvtysmiqjbbunezgzcdpr
+ahvflkatysyiqjxbunezvwcdpr
+ohiflkatysmydjxbunezgwcdpr
+ohvfwkatysmvqjxbunezwwcdpr
+ohvflkatysbiqjxbunergwodpr
+hhvsdkatysmiqjxbunezgwcdpr
+ihvflkwtysmiqjxbunezgacdpr
+ohvfljatysmiqcxbunuzgwcdpr
+ohvflkatysqiqlwbunezgwcdpr
+ohvflkauysmkqjxwunezgwcdpr
+ohvflkatysmoqjqbunezgwodpr
+ohvslkvtysmipjxbunezgwcdpr
+olvflkatysmiujxbunezgwctpr
+osvflxatysmiqjxbenezgwcdpr
+orvflkhtysmiqjxbinezgwcdpr
+ohcflkatystiqjxbunezbwcdpr
+ohcflkatyfmifjxbunezgwcdpr
+ohvflkatdsmiqjxbrnezgwcdpt
+ohvflkatysmiqjxbwnqzawcdpr
+oevflkakysmiqjxbunezgwcdpt
+ofvflkatysmiqjxbunbqgwcdpr
+ohvflkatysmdqjxbunefqwcdpr
+ohvklkalysmiqjxbunezgwcepr
+ocvflhatysmiqjxbunezzwcdpr
+uhvflkatysmiqmxbunezgwcxpr
+ohvflkatyshikjhbunezgwcdpr
+lbvflkatysmoqjxbunezgwcdpr
+ohvflkatssmuqjxbunezgscdpr
+ohvflkatysmifyxbuvezgwcdpr
+ohvfikatysmiqjxbunezgwfupr
+ohvmlkaiysmiqjxqunezgwcdpr
+ohvflkatysmiqjxiunpzgwcdpo
+lhvflkatysmpqjxbenezgwcdpr
+ohvflkatysmiqjobunengwczpr
+ohoflkatysniqjxbunezgccdpr
+ohvfxkatysmiqjgbunyzgwcdpr
+ohvflkytysmiljxbubezgwcdpr
+hhvsdkatysmiqjxjunezgwcdpr
+ohvflkatysmiqjtuunezgwcdpt
+ohvfdkxtysmiqjubunezgwcdpr
+ohxflkatysmiyjxbunezgwcdhr
+ohvflkatysmiqjibunezgwcppd
+ohvflkatysmihjxbunezgwcdhj
+ohvflkatysmiqjxronezgwcdvr
+ofrflxatysmiqjxbunezgwcdpr
+ohvwlkatysmiqjxounezgscdpr
+ohvflkatcodiqjxbunezgwcdpr
+oqvflkatysmiqjxbunebgwmdpr
+ohvflmatysmisjxbunezqwcdpr
+ovvflkatysmiqjxbuxezgwcdpe
+ohvflkatysmdejxbuneztwcdpr
+hhvflkathsmiqjxbwnezgwcdpr
+ohkflkatlsmsqjxbunezgwcdpr
+ohvflkktysmizjxhunezgwcdpr
+ohzflkatysmiqjrbunezgwcdpj
+ohuflwatysmiqjxbunezgwcdgr
+ohvflkatysmiqvxmunpzgwcdpr
+xhvflkwtysmiqjxbunezgwjdpr
+whvflkatysmiqjxbunezgzcopr
+ohvflkayysmiqjxuznezgwcdpr
+khvflkasysmiqjxbunezgwcdpv
+ohvflkatylmiqjxbpnozgwcdpr
+ohvflkgtysziqjxbunezgwgdpr
+ohvfljaiysmiqjxbuvezgwcdpr
+ohvflkxtyslizjxbunezgwcdpr
+ohzflkatysmiqjxbcnezgwcdar
+ohvflkatysmiqjxbisecgwcdpr
+shvflkatyjmiqjkbunezgwcdpr
+mhvflkatysmiqjxvunezgwcdpk
+ohfflkatysmiqjxbunczgwcppr
+ohvflkatysmiqjkzunezgwcdpc
+ohvflkatysmifjxbuneygwctpr
+ohvflkatysmimjbbunezgwcdpe
+ohvflkatjsciqjxbunezgwcdpa
+ohvxlkatysmitjxbunezswcdpr
+ohvslkatfsmiqjxbunezgwudpr
+ohvflkatysmiqexbugezgwcdnr
+onvflkatysmiqjxkunezgtcdpr
+fhsflkalysmiqjxbunezgwcdpr
+oyvflkatysmiqjobxnezgwcdpr
+ohvflkatysmiqjxbunezswgdvr
+phvflkatyymiqjxvunezgwcdpr
+oivflzutysmiqjxbunezgwcdpr
+ohvflkftysmiqjxbunezkwcopr
+ohvflkatysmwnjxbunezgwcdpp
+ohvflkatysmiqkxcunezgwndpr
+phvklkatysmiqjhbunezgwcdpr
+ohvflrawysmiqjxbunhzgwcdpr
+ohvflkatysmiqjxbunecgwcdig
+ohvflpakysmiqjxbunezgwrdpr
+odvflkatykmiqjxbunezglcdpr
+ohtflkatysiiqjxblnezgwcdpr
+lhvfpkatysmiqjxbupezgwcdpr
+ohvflkatdsmiqjpbunezgwcdps
+ohvflkztysmiqjxvunezgwjdpr
+ohvflbatysmxqoxbunezgwcdpr
+ohvklkaigsmiqjxbunezgwcdpr
+ohvfgkawysmiqjxbunezgwcdur
+ohvflkatyskpqjlbunezgwcdpr
+ohvflkatyqmiqjhbupezgwcdpr
+ohqflkatysmiqjxzonezgwcdpr
+ohxfnkatyymiqjxbunezgwcdpr
+ohmflkatpsmiqjxbunezgwcdpw
+ohvflkatysmiqjibnnewgwcdpr
+vevflkatysmiqjxbunezgwcypr
+ohvflkatydmiqwxbungzgwcdpr
+ohsrlkatysmiqjxbcnezgwcdpr
+ohvflkptyvmiqexbunezgwcdpr
+opzflkatysmiqjxrunezgwcdpr
+ohvflkitysmiqjxcunezgwcmpr
+ohvflkatysmhhjxblnezgwcdpr
+ohvflkatysfiqjxbunrzgwmdpr
+ohvflkatyamibjxbunezgwcdpf
+ohvflkalysmigjxbunezggcdpr
+ohvflkatwsmisjxbunezgdcdpr
+dhvflkatysmlqjxbunszgwcdpr
+ohvflkatysmiqjxbueeygwcbpr
+ohvflkatgsmiqjnbunezhwcdpr
+svvflkatysmiqjxbunezgwckpr
+opvflkatysmiqpxbufezgwcdpr
+ohnvlkatysmiqjxbunezglcdpr
+phvflkutysjiqjxbunezgwcdpr
+ohvflabtysmiqjjbunezgwcdpr
+ouvflkatysmiqjsbunezgwcdpk
+osvflkatysmijjxbunezgwcypr
+owvflkatysmiqjxbukxzgwcdpr
+ohvfliatvsmiljxbunezgwcdpr
+ohvflkatysmiqjxbumezbwtdpr
+ohvflkatyfcicjxbunezgwcdpr
+ohvflkatysmiqldbunezgfcdpr
+oqvflkatysmiqixkunezgwcdpr
+ohvflkatysmiqjxbulezgicdpe
+ohvflkatysmiqjxbuniegwcdpl
+ohvflkatysmiqjwbunbzgwcdhr
+ohvflkatysmiqjdbunezgwwdkr
+ohqflkytysmiqjxbunezgwcdpc
+ohvflkatysmigjxbunezqwwdpr
+ohvfloatysmiqjpbumezgwcdpr
+ohvklkathkmiqjxbunezgwcdpr
+ohvflkstjsmiqjxbunezgwctpr
+ohvvlkatysmiqjxbunewgwcdir
+ohnflkatysmiqjxbunszgwcdlr
+ohvflkatysmnqjxbunezgxcdlr
+ohvfrkatysmiqjxbonezgwcdor
+ihvflkatysmiqjxbuneogwcxpr
+ohvflkatysmiqjxbunecgwcccr
+owvflkatysmivjxbunezgwjdpr
+ohvflkgtysmiqjxbunczhwcdpr
+ohyqlkatysmiqjxbunezgwcypr
+ohvflkatysmiqjvbunezuwcdpw
+ohvflkathsmiqmxbuoezgwcdpr
+ehvjlkajysmiqjxbunezgwcdpr
+ohvflkltysmiqjxblnezgwjdpr
+oovflkvtfsmiqjxbunezgwcdpr
+olvfzkatysmiqjxyunezgwcdpr
+ohvflkatysqitjxbunezgncdpr
+yhvflkatysmkqjxbunazgwcdpr
+zlvolkatysmiqjxbunezgwcdpr
+ohvflpatysmiqjxbunezgwcapb
+ohvflkatysmuqjxbunezgfcdur`;
+
+function countLetters(string) {
+  const seen = {};
+
+  const letters = string.split('');
+  for (const ch of letters) {
+    if (!seen[ch]) {
+      seen[ch] = 1;
+    } else {
+      seen[ch] += 1;
+    }
+  }
+
+  return seen;
+}
+
+function getIdInfo(counts) {
+  let hasDouble = false;
+  let hasTriple = false;
+
+  for (const ch of Object.keys(counts)) {
+    if (counts[ch] === 2) {
+      hasDouble = true;
+    } else if (counts[ch] === 3) {
+      hasTriple = true;
+    }
+  }
+
+  return { hasDouble, hasTriple };
+}
+
+
+function processIds(input) {
+  const ids = input.split('\n');
+
+  let doubles = 0;
+  let triples = 0;
+  for (const id of ids) {
+    const counts = countLetters(id);
+    const { hasDouble, hasTriple } = getIdInfo(counts);
+
+    if (hasDouble) {
+      doubles += 1;
+    }
+    if (hasTriple) {
+      triples += 1;
+    }
+  }
+
+  return doubles * triples;
+}
+
+console.log(processIds(INPUT));
