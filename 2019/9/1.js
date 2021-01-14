@@ -168,7 +168,7 @@ function main() {
 
   const computer = new IntCodeComputer(initialProgram);
 
-  computer.enqueueInput([2]);
+  computer.enqueueInput([1]);
 
   const [output] = computer.execute();
 
