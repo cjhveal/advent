@@ -12,10 +12,14 @@ function copyArray(item) {
   }
 }
 
+// to ensure original arrays are not modified during addition
+// we performa a deep copy of the arrays
 function add(a, b) {
   return [copyArray(a), copyArray(b)];
 }
 
+// finds the first item that satisfies the predicate `fn`
+// and returns a list of indexes that identify the location of the item
 function search(fn, item, stack = []) {
   //console.log(item, stack.length);
   if (fn(item, stack)) {
@@ -52,9 +56,17 @@ function numberToStack(num, size) {
 }
 
 
+/*
+ * Stack is a list of 0 and 1 representing left and right
+ * if taken as a binary number, then adjacent numbers also
+ * represent adjacent leaves of the tree
+ */
 function explode(number, stack) {
+  // represent the stack identifying our target as a number
   const numericStack = stackToNumber(stack);
 
+  // find the parent of our target by iterating through the stack
+  // we always stop one level from the end to allow us to mutate items from the parent
   let parent = number;
   for (let i = 0; i < stack.length - 1; i++) {
     parent = parent[stack[i]];
@@ -64,6 +76,8 @@ function explode(number, stack) {
   const [leftValue, rightValue] = parent[stackFinal];
 
 
+  // a stack of all 0 represents the leftmost item
+  // thus there will be no items to explode into to the the left
   if (!stack.every(s => s === 0)) {
     const leftStack = numberToStack(numericStack - 1, stack.length);
 
@@ -72,6 +86,7 @@ function explode(number, stack) {
     for (let i = 0; i < leftStack.length - 1; i++) {
       const nextPlace = place[leftStack[i]];
 
+      // if we've reached a leaf node already, don't continue iterating the stack
       if (!Array.isArray(nextPlace)) {
         final = leftStack[i]
         break;
@@ -80,6 +95,7 @@ function explode(number, stack) {
       place = nextPlace;
     }
 
+    // if we haven't reached the end yet, continue iterating right to minimize distance to item
     while (Array.isArray(place[final])) {
       place = place[final];
       final = 1
@@ -88,6 +104,8 @@ function explode(number, stack) {
     place[final] += leftValue;
   }
 
+  // likewise a stack of all 1s represents the rightmost item
+  // and thus there will be no items to explode into on the right of it
   if (!stack.every(s => s === 1)) {
     const rightStack = numberToStack(numericStack + 1, stack.length);
 
@@ -104,6 +122,7 @@ function explode(number, stack) {
       place = nextPlace;
     }
 
+    // if we haven't reached a leaf node yet continue iterating left
     while (Array.isArray(place[final])) {
       place = place[final];
       final = 0
@@ -112,6 +131,7 @@ function explode(number, stack) {
     place[final] += rightValue;
   }
 
+  // replace the exploded item with 0
   parent[stackFinal] = 0
 
   return number;
