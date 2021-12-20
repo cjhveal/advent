@@ -1,6 +1,17 @@
 const fs = require('fs');
 
 
+function maximum(arr) {
+  let max = -Infinity;
+  for (const x of arr) {
+    if (max < x) {
+      max = x;
+    }
+  }
+
+  return max;
+}
+
 const SMALL_CAVE_REGEX = /^[a-z]+$/
 
 class Graph {
@@ -25,10 +36,39 @@ class Graph {
     this.graphMap.set(target, targetAdjacent);
   }
 
+
+  isSmallCave(node) {
+    return SMALL_CAVE_REGEX.test(node);
+  }
+
+  isValidNeighbor(node, path) {
+    if (node === 'start') {
+      return false;
+    }
+
+    if (this.isSmallCave(node)) {
+      const smallCaves = path.filter(this.isSmallCave);
+      const caveCount = {};
+      for (const cave of smallCaves) {
+        caveCount[cave] = caveCount[cave] || 0;
+        caveCount[cave] += 1;
+      }
+
+      const maxCave = maximum(Object.values(caveCount));
+
+      const allowed = maxCave > 1 ? 1 : 2;
+
+
+      return (caveCount[node] || 0) < allowed;
+    }
+
+    return true;
+  }
+
   getAdjacent(node, path = []) {
     const adjacent = this.graphMap.get(node);
 
-    const validNeighbors = adjacent.filter(node => !(SMALL_CAVE_REGEX.test(node) && path.includes(node)));
+    const validNeighbors = adjacent.filter((n) => this.isValidNeighbor(n, path));
 
     return validNeighbors;
   }
