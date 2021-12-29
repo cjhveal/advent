@@ -160,6 +160,8 @@ const shouldSplit = (item, stack) => {
   return item >= 10
 }
 
+// to reduce, perform all valid explodes then all valid splits
+// including any explodes that result from these operations
 function reduce(number) {
   while (true) {
     const explodeStack = search(shouldExplode, number)
