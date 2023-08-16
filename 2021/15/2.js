@@ -3,18 +3,18 @@ const fs = require('fs');
 
 /**
  * A Min-Priority Queue implementation
- * utilizes three primary data structures:
- * 1. a standard array to implement a min-heap for O(log n) extractMin operation
- * 2. a map to improve decreasePriority complexity from O(n) to O(log n)
- * 3. a set to improve member inclusion checks from O(n) to O(1)
+ *
+ * this min-queue utilizes two primary data structures:
+ * 1. a standard array to implement a min-heap for O(log n) extractMin and insertWithPriority operations
+ * 2. a map to improve decreasePriority and member inclusion check complexity from O(n) to O(log n) and O(1) respectively
  */
 class MinQueue {
   constructor() {
     this.heap = [];
-    this.map = {};
-    this.set = new Set();
+    this.map = new Map();
   }
 
+  // peeks at min item without extracting it
   getMin() {
     return this.heap[0];
   }
@@ -22,20 +22,18 @@ class MinQueue {
   // to insert a node, we add it as the final leaf node and upHeapify it into the correct place
   insertWithPriority(node, priority) {
     this.heap.push({node, priority})
-    this.map[node] = this.heap.length - 1;
-    this.set.add(node);
+    this.map.set(node, this.heap.length - 1);
 
     this.upHeapify(this.heap.length - 1);
   }
 
-  // to extract the minimum, we swap it with a leaf node and perform a downHeapify from the root
+  // to extract the minimum, we swap it with a leaf node, remove previous root, and perform a downHeapify from the new root
   extractMin() {
     this.swap(0, this.heap.length - 1);
 
     const [removed] = this.heap.splice(this.heap.length - 1);
 
-    delete this.map[removed.node];
-    this.set.delete(removed.node);
+    this.map.delete(removed.node);
 
     this.downHeapify(0);
 
@@ -74,9 +72,9 @@ class MinQueue {
     }
   }
 
-  // decreasePriority requires upHeapify to 
+  // decreasePriority requires upHeapify to restore the heap property
   decreasePriority(node, priority) {
-    const index = this.map[node];
+    const index = this.map.get(node);
 
     this.heap[index].priority = priority;
     this.upHeapify(index);
@@ -87,8 +85,8 @@ class MinQueue {
     this.heap[i] = this.heap[j];
     this.heap[j] = temp;
 
-    this.map[this.heap[i].node] = i;
-    this.map[this.heap[j].node] = j;
+    this.map.set(this.heap[i].node, i);
+    this.map.set(this.heap[j].node, j);
   }
 
   size() {
@@ -96,7 +94,7 @@ class MinQueue {
   }
 
   has(node) {
-    return this.set.has(node);
+    return this.map.has(node);
   }
 }
 
@@ -117,10 +115,14 @@ class Grid {
       return line.trim().split('').map(Number);
     });
 
+    // grid is stored as an array of rows of items 
     const height = this.gridTemplate.length;
     const width = this.gridTemplate[0].length;
 
+    // Expand the grid by 5 times in each direction
     this.grid = makeGrid(height*5, width*5);
+
+    // items increment on each repetition and wrap around to 1 after 9
     for (let row = 0; row < this.grid.length; row++) {
       for (let col = 0; col < this.grid[0].length; col++) {
         if (row < height && col < width) {
@@ -137,10 +139,12 @@ class Grid {
       }
     }
 
-
+    // Assign initial distance of all nodes to Infinity
     this.distances = makeGrid(height*5, width*5, Infinity);
+    // Initial distance from the starting node is 0
     this.distances[0][0] = 0;
 
+    // Initialize the min-queue with the distances as above
     this.queue = new MinQueue();
     for (let row = 0; row < this.grid.length; row++) {
       for (let col = 0; col < this.grid[0].length; col++) {
@@ -160,10 +164,12 @@ class Grid {
     return true;
   }
 
+  // neighbor is valid if it is in bounds and unvisited
   isValidNeighbor(x, y) {
     return this.inBounds(x, y) && this.queue.has(`${x},${y}`);
   }
 
+  // return any valid squares above, below, left, and right of the target
   findValidNeighbors(col, row) {
     const neighbors = [
       [col, row - 1],
@@ -174,11 +180,17 @@ class Grid {
 
     const validNeighbors = neighbors.filter(([x, y]) => this.isValidNeighbor(x, y));
 
-    return validNeighbors
+    return validNeighbors;
   }
 
+  /* Dijkstra's algorithm implementation
+   * computes shortest path from top left to all points in the grid, stored in `distances`
+   */
   computeShortestPaths() {
+    // continue until we've visited  all grid squares
     while (this.queue.size() > 0) {
+      // get the unvisited grid square with the minimum distance to the starting node
+      // the use of `extractMin` marks this grid square as visited
       const currentNode = this.queue.extractMin();
       const [col, row] = currentNode.node.split(',').map(Number);
 
