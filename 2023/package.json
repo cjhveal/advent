@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "@types/node": "^22.10.6",
+    "typescript": "^5.7.3"
+  },
+  "scripts": {
+    "watch": "tsc --watch -p ./tsconfig.json"
+  }
+}
